@@ -1,0 +1,125 @@
+.dashboard {
+  padding: 20px;
+  background: linear-gradient(135deg, #f0e3fd, #bc8fff);
+  height: 100vh;
+  font-family: sans-serif;
+  color: #333;
+  overflow: scroll;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #870187;
+}
+
+.poem-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.poem-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.poem-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.poem-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #3c005c;
+}
+
+.poem-excerpt {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #61566d;
+  line-height: 1.5;
+}
+
+.poem-button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3c005c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.poem-button:hover {
+  background-color: #3c005cb4;
+  transform: scale(1.1);
+}
+
+.poem-button:active {
+  background-color: rgb(46, 0, 66);
+}
+
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 1.8rem;
+  }
+
+  .poem-card {
+    padding: 15px;
+  }
+
+  .poem-title {
+    font-size: 1.2rem;
+  }
+
+  .poem-excerpt {
+    font-size: 0.85rem;
+  }
+
+  .poem-button {
+    font-size: 0.9rem;
+  }
+
+  .poem-list {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 1.5rem;
+  }
+
+  .poem-card {
+    padding: 10px;
+  }
+
+  .poem-title {
+    font-size: 1rem;
+  }
+
+  .poem-excerpt {
+    font-size: 0.8rem;
+  }
+
+  .poem-button {
+    font-size: 0.8rem;
+  }
+
+  .poem-list {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+}
